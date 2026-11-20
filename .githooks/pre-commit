@@ -1,0 +1,5 @@
+#!/bin/sh
+# Stops a commit when two post ideas are the same or look alike, or a file cannot be read.
+# Turn it on once per clone: npm run setup (sets core.hooksPath to .githooks).
+cd "$(git rev-parse --show-toplevel)" || exit 1
+exec node tools/posts.mjs check

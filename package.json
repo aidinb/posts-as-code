@@ -1,0 +1,22 @@
+{
+  "name": "posts-as-code",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Your social posts in a git repo: one file per idea, each channel's text, schedule and live links, with a duplicate check",
+  "license": "MIT",
+  "author": "Aidin Bazarchi (https://aidinbazarchi.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidinb/posts-as-code.git"
+  },
+  "keywords": ["social-media", "linkedin", "x", "twitter", "content", "markdown", "duplicates", "claude-code"],
+  "scripts": {
+    "setup": "git config core.hooksPath .githooks",
+    "check": "node tools/posts.mjs check",
+    "test": "node --test --test-timeout=30000 test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
